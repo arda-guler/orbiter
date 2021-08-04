@@ -224,6 +224,12 @@ endif()
 #	ON
 #)
 
+option(
+	ORBITER_BUILD_XRSOUND
+	"Build XRSound module to enable sound in Orbiter"
+	ON
+)
+
 option(ORBITER_MAKE_DOC
 	"Create documentation"
 	ON
@@ -233,6 +239,15 @@ option(ORBITER_MAKE_SDK_SAMPLES
 	"Build the SDK sample projects"
 	OFF
 )
+
+if(ORBITER_BUILD_XRSOUND)
+	set(IRRKLANG_DIR
+		irrKlang_NOTFOUND
+		CACHE
+		PATH
+		"Root folder of irrKlang installation."
+	)
+endif()
 
 if (ORBITER_MAKE_DOC)
 
