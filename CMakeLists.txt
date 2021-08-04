@@ -382,6 +382,7 @@ add_subdirectory(Src)
 add_subdirectory(Utils)
 add_subdirectory(Orbitersdk)
 add_subdirectory(OVP)
+add_subdirectory(Sound)
 
 if(ORBITER_MAKE_DOC)
 	add_subdirectory(Doc)
